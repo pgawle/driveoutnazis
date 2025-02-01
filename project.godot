@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="DriveOutNazis"
+run/main_scene="res://drive_out_nazis.tscn"
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[file_customization]
+
+folder_colors={
+"res://Actors/": "orange",
+"res://Modules/": "pink"
+}
 
 [rendering]
 
