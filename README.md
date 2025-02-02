@@ -1,9 +1,11 @@
 # driveoutnazis
  
 This is learning project. 
+
 Materials (Aim Gotod4, when missing using other): 
 	Setting Up Project: 
-		Forward+, Mobile, Compatibility : https://www.youtube.com/watch?v=KWhVVMpihsc		
+		Forward+, Mobile, Compatibility : https://www.youtube.com/watch?v=KWhVVMpihsc
+				
 		Github Desktop Download: https://desktop.github.com/download/
 		Github connect to project: https://www.youtube.com/watch?v=5H4A74FIEtg
 		Basic Project Settings: https://youtu.be/NFK7VKzpp2o?si=sM-Pl9mxwLkPN4D1&t=73
