@@ -11,6 +11,7 @@ script = ExtResource("1_41c4b")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_2o6te")
 region_enabled = true

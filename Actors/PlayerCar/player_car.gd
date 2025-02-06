@@ -1,25 +1,19 @@
 extends CharacterBody2D
 
-@export var max_speed := 300
-@export_range(0,10,0.1) var drag_factor := 0.1
-# var wheel_base = 70  # Distance from front to rear wheel
-# var steering_angle = 15  # Amount that front wheel turns, in degrees
+@export var speed := 400
+@export var rotation_speed := 1.5
 
-var desired_velocity = Vector2.ZERO
-var steering_velocity = Vector2.ZERO
-# var steer_angle
-
-
-func _physics_process(delta: float) -> void:
-	get_input()
-	move_and_slide()
+#var rotation_direction := 0
 
 func get_input():
-	var direction = Input.get_vector("left", "right", "up", "down")
-	desired_velocity = direction * max_speed
-	steering_velocity = desired_velocity - velocity
-	velocity += steering_velocity * drag_factor
-	rotation = velocity.angle()
+	return {
+		"rotation_direction": Input.get_axis("left", "right"),
+		"_velocity": Input.get_axis("up", "down")
+		}
 
-
+func _physics_process(delta: float) -> void:
+	var input = get_input()
+	velocity = transform.x * input["_velocity"] * speed
+	rotation += input["rotation_direction"] * rotation_speed * delta
+	move_and_slide()
 	
