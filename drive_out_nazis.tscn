@@ -6,4 +6,5 @@
 
 [node name="PlayerCar" parent="." instance=ExtResource("1_75lul")]
 position = Vector2(608, 308)
+rotation = 0.0
 scale = Vector2(0.5, 0.5)

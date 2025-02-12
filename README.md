@@ -20,6 +20,8 @@ Materials (Aim Gotod4, when missing using other):
 - Static Typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
 - Postion: https://docs.godotengine.org/en/stable/classes/class_node2d.html#class-node2d-property-position
 - Code Order: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
+- Input.getAxis https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-get-axis
+- Transforms: https://kidscancode.org/godot_recipes/4.x/math/transforms/
 ### Graphics: 
 - Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			
 
@@ -28,7 +30,8 @@ Materials (Aim Gotod4, when missing using other):
 	Car Steering: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
 
 
-
+### Other
+Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
 
 
 
