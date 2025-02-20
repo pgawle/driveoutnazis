@@ -27,13 +27,12 @@ func _physics_process(delta):
 	velocity = friction["velocity"]
 	
 	var steering = calculate_steering(delta,input["steer_direction"])
+	
 	velocity = steering["velocity"]
 	rotation = steering["rotation"]
 	
 	# wrap character position (show player on the other size of screen)
-	position.x = wrapf(position.x, 0, screen_size.x)
-	position.y = wrapf(position.y, 0, screen_size.y)
-	
+	apply_wrap()
 	
 	move_and_slide()
 
@@ -88,3 +87,6 @@ func calculate_steering(delta, steer_direction):
 	
 	return {"velocity": _velocity, "rotation": _rotation}
 	
+func apply_wrap(): 
+	position.x = wrapf(position.x, 0, screen_size.x)
+	position.y = wrapf(position.y, 0, screen_size.y)
