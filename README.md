@@ -22,12 +22,17 @@ Materials (Aim Gotod4, when missing using other):
 - Code Order: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
 - Input.getAxis https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-get-axis
 - Transforms: https://kidscancode.org/godot_recipes/4.x/math/transforms/
+
+
+
 ### Graphics: 
 - Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			
 
-### Phisics
+### Physics && Math
 	Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84
 	Car Steering: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
+	What is:Interpolacja Liniowa: https://pl.khanacademy.org/computing/pixar/animate/parametric-curves/v/animation-5
+	Interpolation in Godot4: https://kidscancode.org/godot_recipes/4.x/math/interpolation/
 
 
 ### Other
