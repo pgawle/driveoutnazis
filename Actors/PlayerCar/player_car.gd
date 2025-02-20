@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 @export var engine_power := 900  # Forward acceleration force.
 @export var braking := -450
+@export var max_speed_forward := 900
 @export var max_speed_reverse := 250
 
 
@@ -31,13 +32,9 @@ func _physics_process(delta):
 	velocity = steering["velocity"]
 	rotation = steering["rotation"]
 	
+	move_and_slide()
 	# wrap character position (show player on the other size of screen)
 	apply_wrap()
-	
-	move_and_slide()
-
-
-
 	
 func get_input():
 	var _acceleration = Vector2.ZERO
@@ -79,13 +76,15 @@ func calculate_steering(delta, steer_direction):
 	var d = new_heading.dot(velocity.normalized())
 	if d > 0:
 		# using linear interpolation to add drift
-		_velocity = lerp(velocity, new_heading * velocity.length(), traction * delta)
+		_velocity = lerp(velocity, new_heading * min(velocity.length(), max_speed_forward), traction * delta)
 	if d < 0:
 		_velocity = -new_heading * min(velocity.length(), max_speed_reverse)
 
 	_rotation = new_heading.angle()
 	
 	return {"velocity": _velocity, "rotation": _rotation}
+
+
 	
 func apply_wrap(): 
 	position.x = wrapf(position.x, 0, screen_size.x)
