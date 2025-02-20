@@ -22,6 +22,9 @@ Materials (Aim Gotod4, when missing using other):
 - Code Order: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
 - Input.getAxis https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-get-axis
 - Transforms: https://kidscancode.org/godot_recipes/4.x/math/transforms/
+- Clamping (what is it in computer science): https://en.wikipedia.org/wiki/Clamp_(function)
+- Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
+- Math Wrap what it does: "It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds"
 
 
 

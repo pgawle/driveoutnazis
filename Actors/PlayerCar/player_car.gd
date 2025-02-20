@@ -17,6 +17,9 @@ extends CharacterBody2D
 @export var traction_fast := 2.5 # High-speed traction
 @export var traction_slow := 10 # Low-speed traction
 
+
+@onready var screen_size = get_viewport_rect().size
+
 func _physics_process(delta):
 	var input = get_input()
 	velocity += input["acceleration"] * delta
@@ -26,6 +29,11 @@ func _physics_process(delta):
 	var steering = calculate_steering(delta,input["steer_direction"])
 	velocity = steering["velocity"]
 	rotation = steering["rotation"]
+	
+	# wrap character position (show player on the other size of screen)
+	position.x = wrapf(position.x, 0, screen_size.x)
+	position.y = wrapf(position.y, 0, screen_size.y)
+	
 	
 	move_and_slide()
 
@@ -68,21 +76,14 @@ func calculate_steering(delta, steer_direction):
 	var traction = traction_slow
 	if velocity.length() > slip_speed:
 		traction = traction_fast
-	# 4. Are we braking, going forward or backward
+	# 5. Are we braking, going forward or backward
 	var d = new_heading.dot(velocity.normalized())
 	if d > 0:
 		# using linear interpolation to add drift
 		_velocity = lerp(velocity, new_heading * velocity.length(), traction * delta)
 	if d < 0:
-		print('reverse')
 		_velocity = -new_heading * min(velocity.length(), max_speed_reverse)
-	
-	
-	#4. choose which traction value to use - at lower speeds, slip should be low
-	
-	
-	
-	
+
 	_rotation = new_heading.angle()
 	
 	return {"velocity": _velocity, "rotation": _rotation}
