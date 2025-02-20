@@ -25,7 +25,7 @@ Materials (Aim Gotod4, when missing using other):
 - Clamping (what is it in computer science): https://en.wikipedia.org/wiki/Clamp_(function)
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
 - Math Wrap what it does: "It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds"
-
+- @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
 
 
 ### Graphics: 
