@@ -34,14 +34,14 @@ Materials (Aim Gotod4, when missing using other):
 - TilesMaps : https://www.youtube.com/watch?v=43sJIWaj2Yw
 
 ### Physics && Math
-	Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84
-	Car Steering: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
-	What is:Interpolacja Liniowa: https://pl.khanacademy.org/computing/pixar/animate/parametric-curves/v/animation-5
-	Interpolation in Godot4: https://kidscancode.org/godot_recipes/4.x/math/interpolation/
+- Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84
+- Car Steering: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
+- What is:Interpolacja Liniowa: https://pl.khanacademy.org/computing/pixar/animate/parametric-curves/v/animation-5
+- Interpolation in Godot4: https://kidscancode.org/godot_recipes/4.x/math/interpolation/
 
 
 ### Other
-Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
+- Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
 
 
 
