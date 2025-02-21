@@ -29,7 +29,9 @@ Materials (Aim Gotod4, when missing using other):
 
 
 ### Graphics: 
-- Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			
+- Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			\
+- Y-sorting (for tilemap): https://www.youtube.com/watch?v=AHHKfNqnUWI
+- TilesMaps : https://www.youtube.com/watch?v=43sJIWaj2Yw
 
 ### Physics && Math
 	Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84

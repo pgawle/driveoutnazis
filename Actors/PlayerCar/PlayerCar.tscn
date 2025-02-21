@@ -1,18 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://r6yj64iax6w2"]
 
-[ext_resource type="Texture2D" uid="uid://bco8grad453lo" path="res://assets/Civil Vehicles assets.png" id="1_2o6te"]
 [ext_resource type="Script" path="res://Actors/PlayerCar/player_car.gd" id="1_41c4b"]
+[ext_resource type="Texture2D" uid="uid://bhot0uju13xju" path="res://assets/bk_cars1.a.png" id="2_nx3od"]
 
 [node name="PlayerCar" type="CharacterBody2D"]
-position = Vector2(615, 312)
-rotation = -1.55509
-scale = Vector2(5, 5)
+position = Vector2(560, 309)
+rotation = 1.5708
 script = ExtResource("1_41c4b")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-rotation = -1.5708
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_2o6te")
+rotation = 1.5708
+texture = ExtResource("2_nx3od")
 region_enabled = true
-region_rect = Rect2(41, 2597, 1023, 2013)
+region_rect = Rect2(130, 123, 51, 98)
