@@ -28,6 +28,9 @@ Materials (Aim Gotod4, when missing using other):
 - @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
 
 
+### Nodes
+- using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
+
 ### Graphics: 
 - Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			\
 - Y-sorting (for tilemap): https://www.youtube.com/watch?v=AHHKfNqnUWI

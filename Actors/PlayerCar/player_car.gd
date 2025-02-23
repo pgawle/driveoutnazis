@@ -1,27 +1,37 @@
 extends CharacterBody2D
 
 
-@export var wheel_base := 70  	 # Distance from front to rear wheel
+@export var wheel_base := 20  	 # Distance from front to rear wheel
 @export var steer_angle := 15 # Amount that front wheel turns, in degrees
 
-@export var engine_power := 900  # Forward acceleration force.
+@export var engine_power := 500  # Forward acceleration force.
 @export var braking := -450
-@export var max_speed_forward := 900
-@export var max_speed_reverse := 250
+@export var max_speed_forward := 300
+@export var max_speed_reverse := 100
 
 
 @export var friction := -55
 @export var drag := -0.06
 
 
-@export var slip_speed := 400  # Speed where traction is reduced
+@export var slip_speed := 200  # Speed where traction is reduced
 @export var traction_fast := 2.5 # High-speed traction
 @export var traction_slow := 10 # Low-speed traction
 
+@export var scale_rate_x: float=0.02
+@export var scale_rate_y: float=0.03
+@export var scale_up = false
 
 @onready var screen_size = get_viewport_rect().size
+@onready var idle_animation = $IdleAnimTimer
+
+
+func _ready() -> void:
+	idle_animation.timeout.connect(idle_scale)
+
 
 func _physics_process(delta):
+	#idle_scale()
 	var input = get_input()
 	velocity += input["acceleration"] * delta
 	var friction = apply_friction(delta, input["acceleration"],velocity)
@@ -84,7 +94,17 @@ func calculate_steering(delta, steer_direction):
 	
 	return {"velocity": _velocity, "rotation": _rotation}
 
-
+func idle_scale():
+		
+	if(scale_up == false):
+		scale.x -= scale_rate_x
+		scale.y -= scale_rate_y
+		scale_up = true
+	else:
+		scale.x += scale_rate_x
+		scale.y += scale_rate_y
+		scale_up = false
+		
 	
 func apply_wrap(): 
 	position.x = wrapf(position.x, 0, screen_size.x)
