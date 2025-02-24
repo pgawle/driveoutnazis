@@ -22,20 +22,28 @@ extends CharacterBody2D
 @export var scale_rate_y: float=0.03
 @export var scale_up = false
 
+
+
+
+
+
+# ON READY
+
 @onready var screen_size = get_viewport_rect().size
 @onready var idle_animation = $IdleAnimTimer
-
+@onready var car_animation = $CarAnimation
 
 func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
+	car_animation.play()
 
 
 func _physics_process(delta):
 	#idle_scale()
 	var input = get_input()
 	velocity += input["acceleration"] * delta
-	var friction = apply_friction(delta, input["acceleration"],velocity)
-	velocity = friction["velocity"]
+	var _friction = apply_friction(delta, input["acceleration"],velocity)
+	velocity = _friction["velocity"]
 	
 	var steering = calculate_steering(delta,input["steer_direction"])
 	
