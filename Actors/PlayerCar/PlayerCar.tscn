@@ -81,4 +81,4 @@ autostart = true
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_nrek7")
 animation = &"new_animation"
-frame_progress = 0.0564864
+frame_progress = 0.854551
