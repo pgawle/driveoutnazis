@@ -22,7 +22,7 @@ extends CharacterBody2D
 @export var scale_rate_y: float=0.03
 @export var scale_up = false
 
-
+@export var wheeel_skew :float= 3
 
 
 
@@ -32,10 +32,11 @@ extends CharacterBody2D
 @onready var screen_size = get_viewport_rect().size
 @onready var idle_animation = $IdleAnimTimer
 @onready var car_animation = $CarAnimation
-
+@onready var front_wheel_animation = $WheelAnimation
+@onready var front_wheel_sprite = $FrontWheelsSprite
 func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
-	car_animation.play()
+	
 
 
 func _physics_process(delta):
@@ -47,8 +48,28 @@ func _physics_process(delta):
 	
 	var steering = calculate_steering(delta,input["steer_direction"])
 	
+	#print(input["steer_direction"])
+	#front_twheel_sprite.skew = wheeel_skew	
+	
+
+	
+	if input["steer_direction"] > 0:
+		front_wheel_sprite.skew = wheeel_skew * 0.1
+	elif input["steer_direction"] < 0:
+		front_wheel_sprite.skew = - wheeel_skew * 0.1
+	else:
+		front_wheel_sprite.skew = 0
+	
+	
 	velocity = steering["velocity"]
 	rotation = steering["rotation"]
+	
+	if(velocity != Vector2.ZERO):
+		front_wheel_animation.play("drive")
+	else:
+		front_wheel_animation.pause()
+			
+	
 	
 	move_and_slide()
 	# wrap character position (show player on the other size of screen)

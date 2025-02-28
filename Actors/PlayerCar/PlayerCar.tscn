@@ -1,52 +1,99 @@
-[gd_scene load_steps=12 format=3 uid="uid://r6yj64iax6w2"]
+[gd_scene load_steps=18 format=3 uid="uid://r6yj64iax6w2"]
 
 [ext_resource type="Script" path="res://Actors/PlayerCar/player_car.gd" id="1_41c4b"]
 [ext_resource type="Texture2D" uid="uid://bhot0uju13xju" path="res://assets/bk_cars1.a.png" id="2_nx3od"]
 [ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
 [ext_resource type="Texture2D" uid="uid://dc56vtv1iwkbr" path="res://assets/car.png" id="3_djtx3"]
 [ext_resource type="Texture2D" uid="uid://b68gkooxbqv" path="res://assets/UntitledArtwork1.png" id="4_j0qhb"]
+[ext_resource type="Texture2D" uid="uid://ddrb1pvae6ada" path="res://assets/yellow-car2.png" id="5_806wr"]
+[ext_resource type="Texture2D" uid="uid://3wd3s032e75w" path="res://assets/Wheel.png" id="5_f3p3n"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ievb6"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(0, 0, 16, 32)
+[sub_resource type="Animation" id="Animation_u83eh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FrontWheelsSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v4s1s"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(18, 0, 16, 32)
+[sub_resource type="Animation" id="Animation_4gmln"]
+resource_name = "drive"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FrontWheelsSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n7on6"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(36, 0, 16, 32)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rw28k"]
+_data = {
+"RESET": SubResource("Animation_u83eh"),
+"drive": SubResource("Animation_4gmln")
+}
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2miq0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft7fp"]
 atlas = ExtResource("4_j0qhb")
-region = Rect2(0, 34, 16, 32)
+region = Rect2(0, 0, 20, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jgdfg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u2w05"]
 atlas = ExtResource("4_j0qhb")
-region = Rect2(18, 34, 16, 32)
+region = Rect2(20, 0, 20, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0eq5"]
+atlas = ExtResource("4_j0qhb")
+region = Rect2(40, 0, 20, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xd4s"]
+atlas = ExtResource("4_j0qhb")
+region = Rect2(60, 0, 20, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkrao"]
+atlas = ExtResource("4_j0qhb")
+region = Rect2(80, 0, 20, 34)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uywl"]
+atlas = ExtResource("4_j0qhb")
+region = Rect2(100, 0, 20, 34)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nrek7"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ievb6")
+"texture": SubResource("AtlasTexture_ft7fp")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v4s1s")
+"texture": SubResource("AtlasTexture_u2w05")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n7on6")
+"texture": SubResource("AtlasTexture_f0eq5")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_2miq0")
+"texture": SubResource("AtlasTexture_7xd4s")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jgdfg")
+"texture": SubResource("AtlasTexture_bkrao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uywl")
 }],
 "loop": true,
 "name": &"new_animation",
-"speed": 30.0
+"speed": 5.0
 }]
 
 [node name="PlayerCar" type="CharacterBody2D"]
@@ -54,6 +101,7 @@ position = Vector2(560, 309)
 rotation = 1.5708
 script = ExtResource("1_41c4b")
 scale_rate_y = 0.02
+wheeel_skew = 5.0
 metadata/_edit_group_ = true
 
 [node name="start_engine" type="AudioStreamPlayer2D" parent="."]
@@ -77,8 +125,27 @@ texture = ExtResource("3_djtx3")
 wait_time = 0.025
 autostart = true
 
+[node name="WheelAnimation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../CarAnimation")
+libraries = {
+"": SubResource("AnimationLibrary_rw28k")
+}
+speed_scale = 1.5
+
+[node name="FrontWheelsSprite" type="Sprite2D" parent="."]
+position = Vector2(8, -6.10352e-05)
+rotation = 1.5708
+texture = ExtResource("5_f3p3n")
+hframes = 6
+frame = 5
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+rotation = 1.5708
+texture = ExtResource("5_806wr")
+
 [node name="CarAnimation" type="AnimatedSprite2D" parent="."]
+visible = false
 rotation = 1.5708
 sprite_frames = SubResource("SpriteFrames_nrek7")
 animation = &"new_animation"
-frame_progress = 0.854551
