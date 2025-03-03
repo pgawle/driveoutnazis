@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/ford-mustang-engine-1985-78386.mp3-0f72224f04
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

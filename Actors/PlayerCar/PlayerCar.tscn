@@ -1,10 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://r6yj64iax6w2"]
+[gd_scene load_steps=8 format=3 uid="uid://r6yj64iax6w2"]
 
 [ext_resource type="Script" path="res://Actors/PlayerCar/player_car.gd" id="1_41c4b"]
-[ext_resource type="Texture2D" uid="uid://bhot0uju13xju" path="res://assets/bk_cars1.a.png" id="2_nx3od"]
 [ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
-[ext_resource type="Texture2D" uid="uid://dc56vtv1iwkbr" path="res://assets/car.png" id="3_djtx3"]
-[ext_resource type="Texture2D" uid="uid://b68gkooxbqv" path="res://assets/UntitledArtwork1.png" id="4_j0qhb"]
 [ext_resource type="Texture2D" uid="uid://ddrb1pvae6ada" path="res://assets/yellow-car2.png" id="5_806wr"]
 [ext_resource type="Texture2D" uid="uid://3wd3s032e75w" path="res://assets/Wheel.png" id="5_f3p3n"]
 
@@ -46,56 +43,6 @@ _data = {
 "drive": SubResource("Animation_4gmln")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ft7fp"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(0, 0, 20, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u2w05"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(20, 0, 20, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f0eq5"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(40, 0, 20, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7xd4s"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(60, 0, 20, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bkrao"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(80, 0, 20, 34)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0uywl"]
-atlas = ExtResource("4_j0qhb")
-region = Rect2(100, 0, 20, 34)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_nrek7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ft7fp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u2w05")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f0eq5")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7xd4s")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bkrao")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0uywl")
-}],
-"loop": true,
-"name": &"new_animation",
-"speed": 5.0
-}]
-
 [node name="PlayerCar" type="CharacterBody2D"]
 position = Vector2(560, 309)
 rotation = 1.5708
@@ -107,26 +54,15 @@ metadata/_edit_group_ = true
 [node name="start_engine" type="AudioStreamPlayer2D" parent="."]
 rotation = 1.5708
 stream = ExtResource("2_o7wo8")
+pitch_scale = 1.19
 autoplay = true
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-rotation = 1.5708
-texture = ExtResource("2_nx3od")
-region_enabled = true
-region_rect = Rect2(130, 123, 51, 98)
-
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-visible = false
-rotation = 1.5708
-texture = ExtResource("3_djtx3")
 
 [node name="IdleAnimTimer" type="Timer" parent="."]
 wait_time = 0.025
 autostart = true
 
 [node name="WheelAnimation" type="AnimationPlayer" parent="."]
-root_node = NodePath("../CarAnimation")
+root_node = NodePath("../CarBody")
 libraries = {
 "": SubResource("AnimationLibrary_rw28k")
 }
@@ -139,13 +75,7 @@ texture = ExtResource("5_f3p3n")
 hframes = 6
 frame = 5
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="CarBody" type="Sprite2D" parent="."]
 position = Vector2(1, 0)
 rotation = 1.5708
 texture = ExtResource("5_806wr")
-
-[node name="CarAnimation" type="AnimatedSprite2D" parent="."]
-visible = false
-rotation = 1.5708
-sprite_frames = SubResource("SpriteFrames_nrek7")
-animation = &"new_animation"

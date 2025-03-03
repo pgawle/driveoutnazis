@@ -50,7 +50,7 @@ Materials (Aim Gotod4, when missing using other):
 
 ### Other
 - Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
-
+- Adding SFX: https://www.youtube.com/watch?v=H6E8hxGwYRg
 
 
 ---
