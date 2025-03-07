@@ -76,11 +76,11 @@ func _physics_process(delta):
 	
 func get_input():
 	var _acceleration = Vector2.ZERO
-	var turn = Input.get_axis("left", "right")
+	var turn = Input.get_axis("ui_left", "ui_right")
 	var _steer_direction = turn * deg_to_rad(steer_angle)
 	if Input.is_action_pressed("ui_up"):
 		_acceleration = transform.x * engine_power
-	if Input.is_action_pressed("down"):
+	if Input.is_action_pressed("ui_down"):
 		_acceleration = transform.x * braking
 	return {"acceleration": _acceleration, "steer_direction": _steer_direction}
 
