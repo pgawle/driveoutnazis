@@ -31,7 +31,6 @@ extends CharacterBody2D
 
 @onready var screen_size = get_viewport_rect().size
 @onready var idle_animation = $IdleAnimTimer
-@onready var car_animation = $CarAnimation
 @onready var front_wheel_animation = $WheelAnimation
 @onready var front_wheel_sprite = $FrontWheelsSprite
 func _ready() -> void:
@@ -79,7 +78,7 @@ func get_input():
 	var _acceleration = Vector2.ZERO
 	var turn = Input.get_axis("left", "right")
 	var _steer_direction = turn * deg_to_rad(steer_angle)
-	if Input.is_action_pressed("up"):
+	if Input.is_action_pressed("ui_up"):
 		_acceleration = transform.x * engine_power
 	if Input.is_action_pressed("down"):
 		_acceleration = transform.x * braking

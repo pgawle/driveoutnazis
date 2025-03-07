@@ -11,6 +11,14 @@ Materials (Aim Gotod4, when missing using other):
 - Basic Project Settings: https://youtu.be/NFK7VKzpp2o?si=sM-Pl9mxwLkPN4D1&t=73
 - Composition metogology of organising project scenes: 1: https://www.youtube.com/watch?v=PYHgvXqOSo4 2: https://www.youtube.com/watch?v=JJid46XzW8A
 
+### Inputs
+InputEvents: https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html
+InputMaps (project settings): https://www.youtube.com/watch?v=ngHbAmN062c
+** Input actions are a grouping of zero or more InputEvents into a commonly understood title (for example, the default "ui_left" action grouping both joypad-left input and a keyboard's left arrow key).
+	Ergo: there are build in inputs that you can listen too like : ui_up, ui_left, ui_right, ui_down
+ ** 
+
+
 ### GDScript
 
 - Variables (Types and := meaning): https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#variables
