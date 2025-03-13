@@ -1,5 +1,37 @@
 # driveoutnazis
  
+Physhics dictionary: 
+	
+	DRAG FORCE
+	- it is force that activily oppose the car movement
+	- in real life areadynamic drag incricises at higher speed
+	- in game we do the same. As car goes faster we incrise drag force
+	- in code we define drag variable to count the drag force depending on speed
+	
+	VELOCITY
+	- represents where the car is moving
+	- It is VECTOR (we use Vector2) to represent not only SPEED but also DIRECTION 
+	- SPEED + DIRECTION provides posibility to move car in drifts. So the car front is facing one way but it moves the other. 
+	- PERSISTENCE: velocity do not change until other forces will not force the change (DRAG_FORCE, FRICTION)
+
+	ROTATION
+	- represent where the car is poiting
+	- car can be rotated to the direction of movment (drift)
+	
+	STEERING
+	- simmulate effect of turning wheels (based on simplified bicicle model)
+	- steering angle (max angle of front wheels)
+	- steer direction (left, right), (between -1 and 1, multiplied by the maximum angle)
+	- 
+	
+	TRANSFORM.X
+	- Normalised (always lenght=1) poiting in the direction forward axis of a CAR
+
+Kinematic Bicycle Model: 
+	https://www.youtube.com/watch?v=d4WW-Fcm4_k
+	https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
+	
+
 This is learning project.<br/> 
 Materials (Aim Gotod4, when missing using other): 
 

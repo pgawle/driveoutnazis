@@ -4,8 +4,6 @@ extends CharacterBody2D
 # Configuration Parameters
 # ------------------------------------------------------------------
 
-
-
 @export_group("Steering")
 @export var WHEEL_BASE := 20 
 @export var MAX_STEER_ANGLE := 15       # Amount that front wheel turns, in degrees
@@ -27,43 +25,38 @@ extends CharacterBody2D
 @export var TRACTION_WHEN_SLOW := 10     # Low-speed traction
 @export var STOPPING_SPEED_LIMIT := 20.0   # Speed below which car stops when no input
 
-@export_group("Visual Effects")
-@export var SCALE_RATE_X := 0.02
-@export var SCALE_RATE_Y := 0.03
-@export var WHEEL_SKEW := 3
-
-
 # ------------------------------------------------------------------
 # Internal State Variables
 # ------------------------------------------------------------------
-var steer_direction := 0.0
-var scale_up := false 
+var steer_direction := 0.0 
 
 # ------------------------------------------------------------------
 # Node References
 # ------------------------------------------------------------------
 @onready var screen_size = get_viewport_rect().size
-@onready var idle_animation = %IdleAnimTimer
-@onready var front_wheel_animation = %WheelAnimation
-@onready var front_wheel_sprite = %FrontWheelsSprite
+
 
 
 func _ready() -> void:
-	idle_animation.timeout.connect(idle_scale)
+	pass
 
 
 
 func _physics_process(delta):
+	
+	
 	var acceleration = get_acceleration()
+	
 	steer_direction = get_steer_direction(steer_direction, delta)
 	
-	var movement = calculate_movement(steer_direction, delta)
-	velocity = movement["velocity"]
-	rotation = movement["rotation"]
 	
 	apply_speed(acceleration,delta)
 	
-	update_visuals(steer_direction)
+	var movement = calculate_movement(steer_direction, delta)
+	
+	
+	velocity = movement["velocity"]
+	rotation = movement["rotation"]
 	
 	move_and_slide()
 	apply_screen_wrap()
@@ -110,22 +103,25 @@ func calculate_movement(_steer_direction: float, delta) -> Dictionary:
 
 
 func apply_speed(acceleration: Vector2, delta):
+	velocity += acceleration * delta
 	if acceleration == Vector2.ZERO and velocity.length() < STOPPING_SPEED_LIMIT:
 		velocity =  Vector2.ZERO
 	else:
 		var friction_force = velocity * GROUND_FRICTION * delta
 		var drag_force = velocity * velocity.length() * DRAG * delta
-		var acceleration_with_forces = acceleration + drag_force + friction_force
-		velocity += acceleration_with_forces * delta
+		velocity= acceleration+ drag_force + friction_force
 		
 
 
 func get_steer_direction(_steer_direction: float, delta) -> float:
 	var turn = Input.get_axis("ui_left", "ui_right")
-	var target_steer = turn * deg_to_rad(MAX_STEER_ANGLE)
+	var _steer_direction2 = turn * deg_to_rad(MAX_STEER_ANGLE)
+	
+	return _steer_direction2
+	
 	
 	## Smoothly interpolate steering for more realistic feel	
-	return lerp(_steer_direction, target_steer, STEERING_RESPONSE_SPEED * delta)
+	#return lerp(_steer_direction2, target_steer, STEERING_RESPONSE_SPEED * delta)
 	
 func get_acceleration() -> Vector2:
 	var acceleration : Vector2 = Vector2.ZERO
@@ -138,27 +134,3 @@ func get_acceleration() -> Vector2:
 func apply_screen_wrap(): 
 	position.x = wrapf(position.x, 0, screen_size.x)
 	position.y = wrapf(position.y, 0, screen_size.y)
-	
-func update_visuals(_steer_direction):
-	if _steer_direction > 0:
-		front_wheel_sprite.skew = WHEEL_SKEW * 0.1
-	elif _steer_direction < 0:
-		front_wheel_sprite.skew = - WHEEL_SKEW * 0.1
-	else:
-		front_wheel_sprite.skew = 0
-
-	if(velocity != Vector2.ZERO):
-		front_wheel_animation.play("drive")
-	else:
-		front_wheel_animation.pause()
-		
-func idle_scale():
-	if(scale_up == false):
-		scale.x -= SCALE_RATE_X
-		scale.y -= SCALE_RATE_Y
-		scale_up = true
-	else:
-		scale.x += SCALE_RATE_X
-		scale.y += SCALE_RATE_Y
-		scale_up = false
-		

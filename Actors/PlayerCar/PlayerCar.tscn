@@ -47,8 +47,6 @@ _data = {
 position = Vector2(560, 309)
 rotation = 1.5708
 script = ExtResource("1_41c4b")
-scale_rate_y = 0.02
-wheeel_skew = 5.0
 metadata/_edit_group_ = true
 
 [node name="start_engine" type="AudioStreamPlayer2D" parent="."]
@@ -58,10 +56,12 @@ pitch_scale = 1.19
 autoplay = true
 
 [node name="IdleAnimTimer" type="Timer" parent="."]
+unique_name_in_owner = true
 wait_time = 0.025
 autostart = true
 
 [node name="WheelAnimation" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
 root_node = NodePath("../CarBody")
 libraries = {
 "": SubResource("AnimationLibrary_rw28k")
@@ -69,6 +69,7 @@ libraries = {
 speed_scale = 1.5
 
 [node name="FrontWheelsSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(8, -6.10352e-05)
 rotation = 1.5708
 texture = ExtResource("5_f3p3n")
