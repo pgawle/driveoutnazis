@@ -53,7 +53,6 @@ metadata/_edit_group_ = true
 rotation = 1.5708
 stream = ExtResource("2_o7wo8")
 pitch_scale = 1.19
-autoplay = true
 
 [node name="IdleAnimTimer" type="Timer" parent="."]
 unique_name_in_owner = true

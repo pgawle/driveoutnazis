@@ -631,6 +631,8 @@ tile_map_data = PackedByteArray("AAAAABYAAAAUADEAAAAAAB0AAAAUADEAAAABAA8AAAAUADE
 tile_set = SubResource("TileSet_5mlda")
 
 [node name="DrawPlain" type="Node2D" parent="."]
+modulate = Color(1, 1, 1, 0.313726)
+self_modulate = Color(1, 1, 1, 0.313726)
 position = Vector2(0, 2)
 script = ExtResource("1_tt8e5")
 

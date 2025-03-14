@@ -173,21 +173,21 @@ func get_acceleration() -> Vector2:
 	return acceleration
 	
 func apply_screen_wrap(): 
-	var wrap = false
+	var is_wrap = false
 	if position.x > screen_size.x:
-		wrap = true
+		is_wrap = true
 		position.x = 0
 	if position.x < 0:
-		wrap = true
+		is_wrap = true
 		position.x = screen_size.x
 	if position.y > screen_size.y:
-		wrap = true
+		is_wrap = true
 		position.y = 0
 	if position.y < 0:
-		wrap = true
+		is_wrap = true
 		position.y = screen_size.y
 	
-	if(wrap == true):
+	if(is_wrap == true):
 		draw_mark.emit(null)
 			
 		
