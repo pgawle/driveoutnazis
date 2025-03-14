@@ -52,7 +52,11 @@ _Input actions are a grouping of zero or more InputEvents into a commonly unders
 # there are build in inputs that you can listen too like : ui_up, ui_left, ui_right, ui_down_
 Input.is_action_pressed("ui_up")
 ```
-
+### Patterns in Godot
+Signelton: https://www.youtube.com/watch?v=0ox8C9b5fkQ
+Observer Pattern: https://www.youtube.com/watch?v=uNDwVx_hnEA
+Observer: https://gameprogrammingpatterns.com/observer.html
+Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 
 ### GDScript
 
@@ -69,7 +73,7 @@ Input.is_action_pressed("ui_up")
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
 - Math Wrap what it does: "It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds"
 - @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
-
+- Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
 
 ### Nodes
 - Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/

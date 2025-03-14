@@ -1,5 +1,12 @@
 extends CharacterBody2D
 
+
+# ------------------------------------------------------------------
+# Signals
+# ------------------------------------------------------------------
+
+signal draw_mark(point)
+
 # ------------------------------------------------------------------
 # Configuration Parameters
 # ------------------------------------------------------------------
@@ -50,7 +57,8 @@ var drift_timer = 0.0
 @onready var idle_animation = %IdleAnimTimer
 @onready var front_wheel_animation = %WheelAnimation
 @onready var front_wheel_sprite = %FrontWheelsSprite
-
+@onready var back_wheel_pos = %BackWheelLeft
+@onready var front_wheel_pos = %BackWheelRight
 
 func update_handbrake_and_drift(delta):
 	handbrake_active = Input.is_action_pressed("handbrake")
@@ -61,10 +69,14 @@ func update_handbrake_and_drift(delta):
 
 func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
+	
 
 
 
 func _physics_process(delta):
+	
+	
+	
 	var acceleration = get_acceleration()
 	steer_direction = get_steer_direction(steer_direction, delta)
 	
@@ -132,7 +144,6 @@ func apply_speed(acceleration: Vector2, delta):
 	if acceleration == Vector2.ZERO and velocity.length() < STOPPING_SPEED_LIMIT:
 		velocity =  Vector2.ZERO
 	else:
-		print(handbrake_active)
 		var friction_force = velocity * GROUND_FRICTION * delta
 		var drag_force = velocity * velocity.length() * DRAG * delta
 		
@@ -162,8 +173,24 @@ func get_acceleration() -> Vector2:
 	return acceleration
 	
 func apply_screen_wrap(): 
-	position.x = wrapf(position.x, 0, screen_size.x)
-	position.y = wrapf(position.y, 0, screen_size.y)
+	var wrap = false
+	if position.x > screen_size.x:
+		wrap = true
+		position.x = 0
+	if position.x < 0:
+		wrap = true
+		position.x = screen_size.x
+	if position.y > screen_size.y:
+		wrap = true
+		position.y = 0
+	if position.y < 0:
+		wrap = true
+		position.y = screen_size.y
+	
+	if(wrap == true):
+		draw_mark.emit(null)
+			
+		
 	
 func update_visuals(_steer_direction):
 	if _steer_direction > 0:
@@ -177,6 +204,11 @@ func update_visuals(_steer_direction):
 		front_wheel_animation.play("drive")
 	else:
 		front_wheel_animation.pause()
+		
+	if(handbrake_active):
+		draw_mark.emit([back_wheel_pos.global_position, front_wheel_pos.global_position])
+	else:
+		draw_mark.emit(null)	
 		
 func idle_scale():
 	if(scale_up == false):

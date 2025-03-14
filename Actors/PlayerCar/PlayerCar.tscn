@@ -80,3 +80,13 @@ frame = 5
 position = Vector2(1, 0)
 rotation = 1.5708
 texture = ExtResource("5_806wr")
+
+[node name="BackWheelRight" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-6.99997, 7.00003)
+rotation = 1.5708
+
+[node name="BackWheelLeft" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-7.00003, -6.99997)
+rotation = 1.5708
