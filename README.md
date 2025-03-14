@@ -1,4 +1,8 @@
 # driveoutnazis
+
+This is learning project.<br/> 
+Materials (Aim Gotod4, when missing using other): 
+
  
 Physhics dictionary: 
 	
@@ -32,8 +36,7 @@ Kinematic Bicycle Model:
 	https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
 	
 
-This is learning project.<br/> 
-Materials (Aim Gotod4, when missing using other): 
+
 
 ### Setting Up Project
 	 
