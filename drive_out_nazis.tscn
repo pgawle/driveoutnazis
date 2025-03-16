@@ -731,6 +731,7 @@ player = NodePath("../../../PlayerCar")
 offset_left = -1.0
 offset_right = 115.0
 offset_bottom = 31.0
+focus_mode = 0
 text = "Show Settings"
 script = ExtResource("5_jwef1")
 target_node = NodePath("../Settings")

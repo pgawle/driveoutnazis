@@ -9,7 +9,6 @@ func _ready() -> void:
 func _pressed():
 	var node = get_node(target_node)
 	node.visible = !node.visible  # Toggle visibility
-	print(node.visible)
 	update_text()
 
 func update_text():
