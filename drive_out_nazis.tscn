@@ -747,4 +747,11 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 size_flags_horizontal = 4
 
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 606.0
+offset_top = 207.0
+offset_right = 667.0
+offset_bottom = 230.0
+text = "ver 0.31"
+
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]
