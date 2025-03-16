@@ -79,6 +79,12 @@ Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 - Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
 - Classes https://www.youtube.com/watch?v=1B4DSpM0goo
 
+
+### Resources
+Basics: https://www.youtube.com/watch?v=h5vpjCDNa-w
+AtlasTezxture: https://youtu.be/TbzXCHfhK-E?si=wwgnGDyW322V3ioy&t=228
+
+
 ### Nodes
 - Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
 
@@ -89,6 +95,7 @@ Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 
 ### UI, Control Node
 	Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
+	Menu Creation: https://www.youtube.com/watch?v=zHYkcJyE52g
 
 
 ### Animations: 
