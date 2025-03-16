@@ -77,6 +77,7 @@ Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 - Math Wrap what it does: "It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds"
 - @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
 - Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
+- Classes https://www.youtube.com/watch?v=1B4DSpM0goo
 
 ### Nodes
 - Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
@@ -85,6 +86,9 @@ Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 - Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			\
 - Y-sorting (for tilemap): https://www.youtube.com/watch?v=AHHKfNqnUWI
 - TilesMaps : https://www.youtube.com/watch?v=43sJIWaj2Yw
+
+### UI, Control Node
+	Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
 
 
 ### Animations: 
