@@ -15,6 +15,7 @@ You play the recent version: https://pgawle.github.io/driveoutnazis/Build/
 - Composition methodology of organising project scenes: 1: https://www.youtube.com/watch?v=PYHgvXqOSo4 2: https://www.youtube.com/watch?v=JJid46XzW8A
 - Files order short recommendation: https://www.youtube.com/watch?v=kH5HkKNImXo
 - Project organisation with good explanation (OOO approach): https://www.youtube.com/watch?v=cpKr1lRUPWA
+- Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
 
 ## Player Input
 
@@ -26,7 +27,6 @@ _Input actions are a grouping of zero or more InputEvents into a commonly unders
 # there are build in inputs that you can listen too like : ui_up, ui_left, ui_right, ui_down_
 Input.is_action_pressed("ui_up")
 ```
-
 
 ## Physics && Math used for Player Movement
 
@@ -76,9 +76,15 @@ Input.is_action_pressed("ui_up")
 - https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
 
 
+## Godot Concepts
+- @Exports(how to set up), you can edit in IDE inspector, press enter and see the change in-game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
+- Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
+- Custom Resources `Custom resources in Godot are user-created data containers that let you store and organize related information in a reusable way.` : https://www.youtube.com/watch?v=h5vpjCDNa-w
+
+
 ## GdScript
 
-Style guide best practises: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
+Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
 
 ### Basics
 - Variables (Types and := meaning): https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#variables
@@ -91,80 +97,31 @@ Style guide best practises: https://docs.godotengine.org/en/stable/tutorials/scr
 - Observer: https://gameprogrammingpatterns.com/observer.html
 - Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 - Classes https://www.youtube.com/watch?v=1B4DSpM0goo
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br>
-# Todo: Review materials below
-<hr/>
-
-
-
-
-
-QuickHelp:
-	When have Sprite for background use AtlasTexture to actually edit region to be used. 
-	- Documentation https://docs.godotengine.org/pl/4.x/classes/class_atlastexture.html
- 
-
-
-
-
-
-
-### GDScript
-
-
-- Using CharacterBody2D: https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html
-
-- 
-- 
-
-- 
-- Input.getAxis https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-get-axis
-
-
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
 
-- @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
-- Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
-
-
-
-### Resources
-Basics: https://www.youtube.com/watch?v=h5vpjCDNa-w
-AtlasTezxture: https://youtu.be/TbzXCHfhK-E?si=wwgnGDyW322V3ioy&t=228
-
-
-### Nodes
-- Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
-
-### Graphics: 
-- Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186			\
-- Y-sorting (for tilemap): https://www.youtube.com/watch?v=AHHKfNqnUWI
-- TilesMaps : https://www.youtube.com/watch?v=43sJIWaj2Yw
-
-### UI, Control Node
+## User Interface
 - Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
 - Menu Creation: https://www.youtube.com/watch?v=zHYkcJyE52g
 
-### Animations: 
+## Timers 
+- Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
+
+## Graphics
+- Adding Sprite from Region: https://youtu.be/NFK7VKzpp2o?si=pyMdw4o1bdPjKGUC&t=1186
+- AtlasTexture `how to use it add a region to for example Texture Node instead of whole sprite`: https://youtu.be/TbzXCHfhK-E?si=wwgnGDyW322V3ioy&t=228
+- Y-sorting (for tilemap): https://www.youtube.com/watch?v=AHHKfNqnUWI
+- TilesMaps: https://www.youtube.com/watch?v=43sJIWaj2Yw
+
+## Animations: 
 - AnimationPlayer https://www.youtube.com/watch?v=ATfE4k6EP9U
 - AnimatedSprite: https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html
 
-### Other
-- Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
+## Audio
 - Adding SFX: https://www.youtube.com/watch?v=H6E8hxGwYRg
 
 
----
-For review: 
-	- Export vs Tool : https://www.youtube.com/watch?v=PrCza2z0Log
-	- Godot Car Steering GODOT4: https://www.youtube.com/watch?v=Obt-hDTICwQ
-	- Car steering: https://kidscancode.org/godot_recipes/3.x/2d/car_steering/index.html
-	- https://www.gdquest.com/tutorial/godot/learning-paths/beginner/
-	- Adding Sprites Animation: https://www.youtube.com/watch?v=Vwj_hX9h4zo
-	- 4 Topdown movement: https://kidscancode.org/godot_recipes/4.x/2d/topdown_movement/index.html
+## General Tutorial Hubs
+
+- https://www.gdquest.com/
+
+	
