@@ -1,4 +1,4 @@
-# driveoutnazis
+# Drive Out Nazis - Godot Learning Recordings
 
 It is a project to learn Godot and game creation. 
 I am working on Godot 4+
@@ -30,6 +30,9 @@ Input.is_action_pressed("ui_up")
 
 ## Physics && Math used for Player Movement
 
+### Full tutorial for Car Steering in 2D in Godot 4: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
+
+
 ### Physhics dictionary: 
 	
 	DRAG FORCE
@@ -37,12 +40,6 @@ Input.is_action_pressed("ui_up")
 	- in real life areadynamic drag incricises at higher speed
 	- in game we do the same. As car goes faster we incrise drag force
 	- in code we define drag variable to count the drag force depending on speed
-	
-	VELOCITY
-	- represents where the car is moving
-	- It is VECTOR (we use Vector2) to represent not only SPEED but also DIRECTION 
-	- SPEED + DIRECTION provides posibility to move car in drifts. So the car front is facing one way but it moves the other. 
-	- PERSISTENCE: velocity do not change until other forces will not force the change (DRAG_FORCE, FRICTION)
 
 	ROTATION
 	- represent where the car is poiting
@@ -57,6 +54,55 @@ Input.is_action_pressed("ui_up")
 	TRANSFORM.X
 	- Normalised (always lenght=1) poiting in the direction forward axis of a CAR
 
+### Velocity
+	VELOCITY
+	- represents where the car is moving
+	- It is VECTOR (we use Vector2) to represent not only SPEED but also DIRECTION 
+	- SPEED + DIRECTION provides posibility to move car in drifts. So the car front is facing one way but it moves the other. 
+	- PERSISTENCE: velocity do not change until other forces will not force the change (DRAG_FORCE, FRICTION)
+- Velocity angle illustration: https://raw.githubusercontent.com/godotengine/godot-docs/master/img/vector2_angle.png
+- Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84
+
+### Math and Vectors
+
+- 2D Transforms: https://kidscancode.org/godot_recipes/4.x/math/transforms/
+- Math Wrap what it does: `It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds`
+- Clamping (what is it in computer science): https://en.wikipedia.org/wiki/Clamp_(function)
+- linear interpolation: https://pl.khanacademy.org/computing/pixar/animate/parametric-curves/v/animation-5
+- Interpolation in Godot4: https://kidscancode.org/godot_recipes/4.x/math/interpolation/
+
+### Kinematic Bicycle Model and Steering
+- https://www.youtube.com/watch?v=d4WW-Fcm4_k
+- https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
+
+
+## GdScript
+
+Style guide best practises: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
+
+### Basics
+- Variables (Types and := meaning): https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#variables
+- Static Typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
+- Dictionary(data by keys to return multiple values): https://docs.godotengine.org/en/stable/classes/class_dictionary.html#class-dictionary
+
+### Patterns
+- Signelton: https://www.youtube.com/watch?v=0ox8C9b5fkQ
+- Observer Pattern: https://www.youtube.com/watch?v=uNDwVx_hnEA
+- Observer: https://gameprogrammingpatterns.com/observer.html
+- Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
+- Classes https://www.youtube.com/watch?v=1B4DSpM0goo
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+# Todo: Review materials below
+<hr/>
+
+
+
 
 
 QuickHelp:
@@ -65,42 +111,27 @@ QuickHelp:
  
 
 
-Kinematic Bicycle Model: 
-	https://www.youtube.com/watch?v=d4WW-Fcm4_k
-	https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
-	
 
 
 
-### Setting Up Project
-	 
-
-
-### Inputs
-
-### Patterns in Godot
-Signelton: https://www.youtube.com/watch?v=0ox8C9b5fkQ
-Observer Pattern: https://www.youtube.com/watch?v=uNDwVx_hnEA
-Observer: https://gameprogrammingpatterns.com/observer.html
-Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 
 ### GDScript
 
-- Variables (Types and := meaning): https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#variables
+
 - Using CharacterBody2D: https://docs.godotengine.org/en/stable/tutorials/physics/using_character_body_2d.html
-- Dictionary(data by keys to return multiple values): https://docs.godotengine.org/en/stable/classes/class_dictionary.html#class-dictionary
-- Velocity angle ilustration: https://raw.githubusercontent.com/godotengine/godot-docs/master/img/vector2_angle.png
-- Static Typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
-- Postion: https://docs.godotengine.org/en/stable/classes/class_node2d.html#class-node2d-property-position
-- Code Order: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_styleguide.html#code-order
+
+- 
+- 
+
+- 
 - Input.getAxis https://docs.godotengine.org/en/stable/classes/class_input.html#class-input-method-get-axis
-- Transforms: https://kidscancode.org/godot_recipes/4.x/math/transforms/
-- Clamping (what is it in computer science): https://en.wikipedia.org/wiki/Clamp_(function)
+
+
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
-- Math Wrap what it does: "It ensures that a number stays within a specified range by looping it back around when it exceeds the bounds"
+
 - @Exports(how to set up), you can edit in IDE inspector, press endter and see the change in game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
 - Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
-- Classes https://www.youtube.com/watch?v=1B4DSpM0goo
+
 
 
 ### Resources
@@ -117,20 +148,12 @@ AtlasTezxture: https://youtu.be/TbzXCHfhK-E?si=wwgnGDyW322V3ioy&t=228
 - TilesMaps : https://www.youtube.com/watch?v=43sJIWaj2Yw
 
 ### UI, Control Node
-	Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
-	Menu Creation: https://www.youtube.com/watch?v=zHYkcJyE52g
-
+- Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
+- Menu Creation: https://www.youtube.com/watch?v=zHYkcJyE52g
 
 ### Animations: 
 - AnimationPlayer https://www.youtube.com/watch?v=ATfE4k6EP9U
 - AnimatedSprite: https://docs.godotengine.org/en/stable/tutorials/2d/2d_sprite_animation.html
-
-### Physics && Math
-- Velocity and Acceleration (Godot): https://www.youtube.com/watch?v=5OG_Sw6hM84
-- Car Steering: https://kidscancode.org/godot_recipes/4.x/2d/car_steering/index.html
-- What is:Interpolacja Liniowa: https://pl.khanacademy.org/computing/pixar/animate/parametric-curves/v/animation-5
-- Interpolation in Godot4: https://kidscancode.org/godot_recipes/4.x/math/interpolation/
-
 
 ### Other
 - Export to web: https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_web.html
