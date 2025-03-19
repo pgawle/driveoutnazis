@@ -1,18 +1,36 @@
 # driveoutnazis
 
-This is learning project.<br/> 
-Materials (Aim Gotod4, when missing using other): 
+It is a project to learn Godot and game creation. 
+I am working on Godot 4+
+
+You play the recent version: https://pgawle.github.io/driveoutnazis/Build/
 
 
-Project Organisation:
-	Files order short recommendation: https://www.youtube.com/watch?v=kH5HkKNImXo
-	Project ogranisation with good explonation (OOO approach): https://www.youtube.com/watch?v=cpKr1lRUPWA
+## Setting up Project and Project Organisation:
 
-QuickHelp:
-	When have Sprite for background use AtlasTexture to actually edit region to be used. 
-	- Documentation https://docs.godotengine.org/pl/4.x/classes/class_atlastexture.html
- 
-Physhics dictionary: 
+- Forward+, Mobile, Compatibility: https://www.youtube.com/watch?v=KWhVVMpihsc	
+- GitHub Desktop Download: https://desktop.github.com/download/
+- Github connect to project: https://www.youtube.com/watch?v=5H4A74FIEtg
+- Basic Project Settings: https://youtu.be/NFK7VKzpp2o?si=sM-Pl9mxwLkPN4D1&t=73
+- Composition methodology of organising project scenes: 1: https://www.youtube.com/watch?v=PYHgvXqOSo4 2: https://www.youtube.com/watch?v=JJid46XzW8A
+- Files order short recommendation: https://www.youtube.com/watch?v=kH5HkKNImXo
+- Project organisation with good explanation (OOO approach): https://www.youtube.com/watch?v=cpKr1lRUPWA
+
+## Player Input
+
+- InputEvents: https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html
+
+- InputMaps (project settings): https://www.youtube.com/watch?v=ngHbAmN062c
+_Input actions are a grouping of zero or more InputEvents into a commonly understood title (for example, the default "ui_left" action grouping both joypad-left input and a keyboard's left arrow key)._
+```python
+# there are build in inputs that you can listen too like : ui_up, ui_left, ui_right, ui_down_
+Input.is_action_pressed("ui_up")
+```
+
+
+## Physics && Math used for Player Movement
+
+### Physhics dictionary: 
 	
 	DRAG FORCE
 	- it is force that activily oppose the car movement
@@ -39,6 +57,14 @@ Physhics dictionary:
 	TRANSFORM.X
 	- Normalised (always lenght=1) poiting in the direction forward axis of a CAR
 
+
+
+QuickHelp:
+	When have Sprite for background use AtlasTexture to actually edit region to be used. 
+	- Documentation https://docs.godotengine.org/pl/4.x/classes/class_atlastexture.html
+ 
+
+
 Kinematic Bicycle Model: 
 	https://www.youtube.com/watch?v=d4WW-Fcm4_k
 	https://dingyan89.medium.com/simple-understanding-of-kinematic-bicycle-model-81cac6420357
@@ -48,21 +74,10 @@ Kinematic Bicycle Model:
 
 ### Setting Up Project
 	 
-- Forward+, Mobile, Compatibility : https://www.youtube.com/watch?v=KWhVVMpihsc	
-- Github Desktop Download: https://desktop.github.com/download/
-- Github connect to project: https://www.youtube.com/watch?v=5H4A74FIEtg
-- Basic Project Settings: https://youtu.be/NFK7VKzpp2o?si=sM-Pl9mxwLkPN4D1&t=73
-- Composition metogology of organising project scenes: 1: https://www.youtube.com/watch?v=PYHgvXqOSo4 2: https://www.youtube.com/watch?v=JJid46XzW8A
+
 
 ### Inputs
-- InputEvents: https://docs.godotengine.org/en/stable/tutorials/inputs/inputevent.html
 
-- InputMaps (project settings): https://www.youtube.com/watch?v=ngHbAmN062c
-_Input actions are a grouping of zero or more InputEvents into a commonly understood title (for example, the default "ui_left" action grouping both joypad-left input and a keyboard's left arrow key)._
-```python
-# there are build in inputs that you can listen too like : ui_up, ui_left, ui_right, ui_down_
-Input.is_action_pressed("ui_up")
-```
 ### Patterns in Godot
 Signelton: https://www.youtube.com/watch?v=0ox8C9b5fkQ
 Observer Pattern: https://www.youtube.com/watch?v=uNDwVx_hnEA
