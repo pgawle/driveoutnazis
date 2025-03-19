@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csd7evf4r2en"
-path="res://.godot/imported/index.icon.png-c4b3784e339ebcd8888318a7885993d4.ctex"
+uid="uid://3wd3s032e75w"
+path="res://.godot/imported/front-wheel-sprite.png-a9b7643e83461da6cb35a9329fdee772.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/ver0.3/index.icon.png"
-dest_files=["res://.godot/imported/index.icon.png-c4b3784e339ebcd8888318a7885993d4.ctex"]
+source_file="res://player/assets/front-wheel-sprite.png"
+dest_files=["res://.godot/imported/front-wheel-sprite.png-a9b7643e83461da6cb35a9329fdee772.ctex"]
 
 [params]
 

@@ -3,6 +3,14 @@
 This is learning project.<br/> 
 Materials (Aim Gotod4, when missing using other): 
 
+
+Project Organisation:
+	Files order short recommendation: https://www.youtube.com/watch?v=kH5HkKNImXo
+	Project ogranisation with good explonation (OOO approach): https://www.youtube.com/watch?v=cpKr1lRUPWA
+
+QuickHelp:
+	When have Sprite for background use AtlasTexture to actually edit region to be used. 
+	- Documentation https://docs.godotengine.org/pl/4.x/classes/class_atlastexture.html
  
 Physhics dictionary: 
 	
@@ -116,6 +124,7 @@ AtlasTezxture: https://youtu.be/TbzXCHfhK-E?si=wwgnGDyW322V3ioy&t=228
 
 ---
 For review: 
+	- Export vs Tool : https://www.youtube.com/watch?v=PrCza2z0Log
 	- Godot Car Steering GODOT4: https://www.youtube.com/watch?v=Obt-hDTICwQ
 	- Car steering: https://kidscancode.org/godot_recipes/3.x/2d/car_steering/index.html
 	- https://www.gdquest.com/tutorial/godot/learning-paths/beginner/

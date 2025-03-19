@@ -26,9 +26,7 @@ window/stretch/scale_mode="integer"
 [file_customization]
 
 folder_colors={
-"res://Actors/": "orange",
-"res://Build/": "green",
-"res://Modules/": "pink"
+"res://build/": "green"
 }
 
 [input]

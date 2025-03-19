@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://r6yj64iax6w2"]
+
+[ext_resource type="Script" path="res://player/player.gd" id="1_41c4b"]
+[ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://player/assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
+[ext_resource type="Texture2D" uid="uid://ddrb1pvae6ada" path="res://player/assets/yellow-car.png" id="5_806wr"]
+[ext_resource type="Texture2D" uid="uid://3wd3s032e75w" path="res://player/assets/front-wheel-sprite.png" id="5_f3p3n"]
+
+[sub_resource type="Animation" id="Animation_u83eh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FrontWheelsSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+
+[sub_resource type="Animation" id="Animation_4gmln"]
+resource_name = "drive"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../FrontWheelsSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667, 0.1, 0.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rw28k"]
+_data = {
+"RESET": SubResource("Animation_u83eh"),
+"drive": SubResource("Animation_4gmln")
+}
+
+[node name="PlayerCar" type="CharacterBody2D"]
+position = Vector2(560, 309)
+rotation = 1.5708
+script = ExtResource("1_41c4b")
+metadata/_edit_group_ = true
+
+[node name="start_engine" type="AudioStreamPlayer2D" parent="."]
+rotation = 1.5708
+stream = ExtResource("2_o7wo8")
+pitch_scale = 1.19
+
+[node name="IdleAnimTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.025
+autostart = true
+
+[node name="WheelAnimation" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("../CarBody")
+libraries = {
+"": SubResource("AnimationLibrary_rw28k")
+}
+speed_scale = 1.5
+
+[node name="FrontWheelsSprite" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(8, -6.10352e-05)
+rotation = 1.5708
+texture = ExtResource("5_f3p3n")
+hframes = 6
+frame = 5
+
+[node name="CarBody" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+rotation = 1.5708
+texture = ExtResource("5_806wr")
+
+[node name="BackWheelRight" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-6.99997, 7.00003)
+rotation = 1.5708
+
+[node name="BackWheelLeft" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-7.00003, -6.99997)
+rotation = 1.5708

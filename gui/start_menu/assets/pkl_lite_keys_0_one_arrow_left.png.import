@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csd7evf4r2en"
-path="res://.godot/imported/index.icon.png-c4b3784e339ebcd8888318a7885993d4.ctex"
+uid="uid://cfc3eholm7210"
+path="res://.godot/imported/pkl_lite_keys_0_one_arrow_left.png-f590c0cfe0abff1a832a32d0f8147473.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://build/ver0.3/index.icon.png"
-dest_files=["res://.godot/imported/index.icon.png-c4b3784e339ebcd8888318a7885993d4.ctex"]
+source_file="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_left.png"
+dest_files=["res://.godot/imported/pkl_lite_keys_0_one_arrow_left.png-f590c0cfe0abff1a832a32d0f8147473.ctex"]
 
 [params]
 
