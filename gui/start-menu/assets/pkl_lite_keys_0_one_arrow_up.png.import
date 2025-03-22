@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1w52cpggv7n0"
-path="res://.godot/imported/pkl_lite_keys_7_fiveplus.png-b109bb1496c4e9aa907738a56bb64938.ctex"
+uid="uid://dy6cr5rwkgl65"
+path="res://.godot/imported/pkl_lite_keys_0_one_arrow_up.png-8d61b837b351403d4f75b847766ea1c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gui/start_menu/assets/pkl_lite_keys_7_fiveplus.png"
-dest_files=["res://.godot/imported/pkl_lite_keys_7_fiveplus.png-b109bb1496c4e9aa907738a56bb64938.ctex"]
+source_file="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_up.png"
+dest_files=["res://.godot/imported/pkl_lite_keys_0_one_arrow_up.png-8d61b837b351403d4f75b847766ea1c8.ctex"]
 
 [params]
 

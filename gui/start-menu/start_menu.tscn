@@ -1,12 +1,12 @@
 [gd_scene load_steps=9 format=3 uid="uid://ynokfwiqhneu"]
 
-[ext_resource type="Script" path="res://gui/start_menu/start_menu.gd" id="1_xo4ft"]
-[ext_resource type="Texture2D" uid="uid://b3wwpyvxubgnw" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_right.png" id="2_pmo6v"]
-[ext_resource type="Texture2D" uid="uid://c0jxl202r3lio" path="res://gui/start_menu/assets/FreeHorrorUi.png" id="2_wij2n"]
-[ext_resource type="Texture2D" uid="uid://cfc3eholm7210" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_left.png" id="3_7ayjc"]
-[ext_resource type="Texture2D" uid="uid://d0ptk0cvvb6u4" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_down.png" id="4_dr0ns"]
-[ext_resource type="Texture2D" uid="uid://dy6cr5rwkgl65" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_up.png" id="5_o25sc"]
-[ext_resource type="Texture2D" uid="uid://b1w52cpggv7n0" path="res://gui/start_menu/assets/pkl_lite_keys_7_fiveplus.png" id="6_py8k2"]
+[ext_resource type="Script" path="res://gui/start-menu/start_menu.gd" id="1_xo4ft"]
+[ext_resource type="Texture2D" uid="uid://b3wwpyvxubgnw" path="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_right.png" id="2_pmo6v"]
+[ext_resource type="Texture2D" uid="uid://c0jxl202r3lio" path="res://gui/start-menu/assets/FreeHorrorUi.png" id="2_wij2n"]
+[ext_resource type="Texture2D" uid="uid://cfc3eholm7210" path="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_left.png" id="3_7ayjc"]
+[ext_resource type="Texture2D" uid="uid://d0ptk0cvvb6u4" path="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_down.png" id="4_dr0ns"]
+[ext_resource type="Texture2D" uid="uid://dy6cr5rwkgl65" path="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_up.png" id="5_o25sc"]
+[ext_resource type="Texture2D" uid="uid://b1w52cpggv7n0" path="res://gui/start-menu/assets/pkl_lite_keys_7_fiveplus.png" id="6_py8k2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v6pgx"]
 atlas = ExtResource("2_wij2n")

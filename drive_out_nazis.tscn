@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://r6yj64iax6w2" path="res://player/player.tscn" id="1_75lul"]
 [ext_resource type="Script" path="res://wheels_tracks_layer/draw_plain.gd" id="1_tt8e5"]
 [ext_resource type="Texture2D" uid="uid://cs4nb16yriml7" path="res://map/assets/CP_V1.0.4.png" id="2_eh6l0"]
-[ext_resource type="PackedScene" uid="uid://ynokfwiqhneu" path="res://gui/start_menu/start_menu.tscn" id="5_kuo5v"]
+[ext_resource type="PackedScene" uid="uid://ynokfwiqhneu" path="res://gui/start-menu/start_menu.tscn" id="5_kuo5v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wrl3"]
 texture = ExtResource("2_eh6l0")

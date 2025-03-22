@@ -100,8 +100,10 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
 
 ## User Interface
+- Menu Creation with, most used Nodes (10 min): https://www.youtube.com/watch?v=VL_M1dr74a0
 - Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
-- Menu Creation: https://www.youtube.com/watch?v=zHYkcJyE52g
+- Splash Screen (quick): https://www.youtube.com/watch?v=xy-ssYTQ3as
+- Splash Screen Manager: https://www.youtube.com/watch?v=QKAuacUG0y4
 
 ## Timers 
 - Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/

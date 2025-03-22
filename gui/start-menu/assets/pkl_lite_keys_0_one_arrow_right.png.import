@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0jxl202r3lio"
-path="res://.godot/imported/FreeHorrorUi.png-bb0c6ab0fa1e9ac49402fbfc397f7b56.ctex"
+uid="uid://b3wwpyvxubgnw"
+path="res://.godot/imported/pkl_lite_keys_0_one_arrow_right.png-f92f4956c854a537b4c4d587c36efdcf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gui/start_menu/assets/FreeHorrorUi.png"
-dest_files=["res://.godot/imported/FreeHorrorUi.png-bb0c6ab0fa1e9ac49402fbfc397f7b56.ctex"]
+source_file="res://gui/start-menu/assets/pkl_lite_keys_0_one_arrow_right.png"
+dest_files=["res://.godot/imported/pkl_lite_keys_0_one_arrow_right.png-f92f4956c854a537b4c4d587c36efdcf.ctex"]
 
 [params]
 
