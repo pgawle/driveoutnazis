@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://dm0yrb41prba7"]
 
-[ext_resource type="Texture2D" uid="uid://derpnj3ncep1k" path="res://gui/splash-screen/assets/made-in-godot.png" id="1_d5g3k"]
-[ext_resource type="Script" path="res://gui/splash-screen/splash-screen.gd" id="1_sap66"]
-[ext_resource type="PackedScene" uid="uid://bj7fk75m85xhi" path="res://drive_out_nazis.tscn" id="2_rcub6"]
-[ext_resource type="Texture2D" uid="uid://b0lihoq8mjca0" path="res://gui/splash-screen/assets/black-fish-games-logo2.png" id="3_jv6sj"]
+[ext_resource type="Script" path="res://gui/splash_screen/splash_screen.gd" id="1_va5ke"]
+[ext_resource type="PackedScene" uid="uid://bj7fk75m85xhi" path="res://drive_out_nazis.tscn" id="2_ib7dr"]
+[ext_resource type="Texture2D" uid="uid://b0lihoq8mjca0" path="res://gui/splash_screen/assets/black-fish-games-logo2.png" id="3_4vpea"]
+[ext_resource type="Texture2D" uid="uid://derpnj3ncep1k" path="res://gui/splash_screen/assets/made-in-godot.png" id="4_480ad"]
 
 [node name="Control" type="Control" node_paths=PackedStringArray("splash_screen_container")]
 layout_mode = 3
@@ -12,8 +12,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_sap66")
-load_scene = ExtResource("2_rcub6")
+script = ExtResource("1_va5ke")
+load_scene = ExtResource("2_ib7dr")
 splash_screen_container = NodePath("SplashScreenContainer")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -43,9 +43,9 @@ grow_vertical = 2
 [node name="Logo" type="TextureRect" parent="SplashScreenContainer"]
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 2
-texture = ExtResource("3_jv6sj")
+texture = ExtResource("3_4vpea")
 stretch_mode = 4
 
 [node name="Godot" type="TextureRect" parent="SplashScreenContainer"]
 layout_mode = 2
-texture = ExtResource("1_d5g3k")
+texture = ExtResource("4_480ad")

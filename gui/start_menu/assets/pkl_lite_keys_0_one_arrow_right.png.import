@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://derpnj3ncep1k"
-path="res://.godot/imported/made-in-godot.png-5c74ad6cca1e4f6af05e14bc8cc70315.ctex"
+uid="uid://b3wwpyvxubgnw"
+path="res://.godot/imported/pkl_lite_keys_0_one_arrow_right.png-22b7ac7d4cb2cedb2a7eb96659ef6df0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gui/splash-screen/assets/made-in-godot.png"
-dest_files=["res://.godot/imported/made-in-godot.png-5c74ad6cca1e4f6af05e14bc8cc70315.ctex"]
+source_file="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_right.png"
+dest_files=["res://.godot/imported/pkl_lite_keys_0_one_arrow_right.png-22b7ac7d4cb2cedb2a7eb96659ef6df0.ctex"]
 
 [params]
 

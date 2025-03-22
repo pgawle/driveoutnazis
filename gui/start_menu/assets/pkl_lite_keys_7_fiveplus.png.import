@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0lihoq8mjca0"
-path="res://.godot/imported/black-fish-games-logo2.png-f5489547d0160c3d9410d6f9b70ce63c.ctex"
+uid="uid://b1w52cpggv7n0"
+path="res://.godot/imported/pkl_lite_keys_7_fiveplus.png-b109bb1496c4e9aa907738a56bb64938.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://gui/splash-screen/assets/black-fish-games-logo2.png"
-dest_files=["res://.godot/imported/black-fish-games-logo2.png-f5489547d0160c3d9410d6f9b70ce63c.ctex"]
+source_file="res://gui/start_menu/assets/pkl_lite_keys_7_fiveplus.png"
+dest_files=["res://.godot/imported/pkl_lite_keys_7_fiveplus.png-b109bb1496c4e9aa907738a56bb64938.ctex"]
 
 [params]
 
