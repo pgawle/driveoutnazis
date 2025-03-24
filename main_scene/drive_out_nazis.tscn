@@ -1,12 +1,13 @@
-[gd_scene load_steps=7 format=4 uid="uid://bj7fk75m85xhi"]
+[gd_scene load_steps=8 format=4 uid="uid://bj7fk75m85xhi"]
 
-[ext_resource type="PackedScene" uid="uid://r6yj64iax6w2" path="res://player/player.tscn" id="1_75lul"]
-[ext_resource type="Script" path="res://wheels_tracks_layer/draw_plain.gd" id="1_tt8e5"]
-[ext_resource type="Texture2D" uid="uid://cs4nb16yriml7" path="res://map/assets/CP_V1.0.4.png" id="2_eh6l0"]
-[ext_resource type="PackedScene" uid="uid://tsxmi2najsog" path="res://gui/gui.tscn" id="4_pw53u"]
+[ext_resource type="Texture2D" uid="uid://cs4nb16yriml7" path="res://map/assets/CP_V1.0.4.png" id="1_iskhr"]
+[ext_resource type="Script" path="res://wheels_tracks_layer/draw_plain.gd" id="2_cs18d"]
+[ext_resource type="PackedScene" uid="uid://r6yj64iax6w2" path="res://player/player.tscn" id="3_1wui1"]
+[ext_resource type="PackedScene" uid="uid://tsxmi2najsog" path="res://gui/gui.tscn" id="4_lxbwq"]
+[ext_resource type="PackedScene" uid="uid://dyhdnw2jtt6jk" path="res://enemies/basic_enemy/basic_enemy.tscn" id="5_hotyl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7wrl3"]
-texture = ExtResource("2_eh6l0")
+texture = ExtResource("1_iskhr")
 2:2/0 = 0
 3:2/0 = 0
 4:2/0 = 0
@@ -635,14 +636,17 @@ tile_set = SubResource("TileSet_5mlda")
 modulate = Color(1, 1, 1, 0.313726)
 self_modulate = Color(1, 1, 1, 0.313726)
 position = Vector2(0, 2)
-script = ExtResource("1_tt8e5")
+script = ExtResource("2_cs18d")
 
-[node name="PlayerCar" parent="." instance=ExtResource("1_75lul")]
+[node name="PlayerCar" parent="." instance=ExtResource("3_1wui1")]
 rotation = -6.28319
 scale = Vector2(1.5, 1.5)
 
 [node name="GuiLayerBase" type="CanvasLayer" parent="."]
 
-[node name="GUI" parent="GuiLayerBase" instance=ExtResource("4_pw53u")]
+[node name="GUI" parent="GuiLayerBase" instance=ExtResource("4_lxbwq")]
+
+[node name="BasicEnemy" parent="." instance=ExtResource("5_hotyl")]
+position = Vector2(132, 163)
 
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]

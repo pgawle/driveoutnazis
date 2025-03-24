@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dgo2laye8apgb"]
 
 [ext_resource type="Script" path="res://scene_control.gd" id="1_o47f1"]
-[ext_resource type="PackedScene" uid="uid://bj7fk75m85xhi" path="res://game/drive_out_nazis.tscn" id="2_waxnd"]
+[ext_resource type="PackedScene" uid="uid://bj7fk75m85xhi" path="res://main_scene/drive_out_nazis.tscn" id="2_waxnd"]
 [ext_resource type="PackedScene" uid="uid://dm0yrb41prba7" path="res://gui/splash_screen/splash_screen.tscn" id="3_1f3q6"]
 
 [node name="SceneControl" type="Node2D"]
