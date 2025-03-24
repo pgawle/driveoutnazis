@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://tsxmi2najsog"]
+
+[ext_resource type="PackedScene" uid="uid://ynokfwiqhneu" path="res://gui/start_menu/start_menu.tscn" id="1_rof5g"]
+[ext_resource type="Theme" uid="uid://ciddn0052nvkk" path="res://gui/themes/basic_theme/basic_theme.tres" id="2_wn6wo"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="StartMenu" parent="." instance=ExtResource("1_rof5g")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+size_flags_horizontal = 4
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+theme = ExtResource("2_wn6wo")

@@ -1,0 +1,41 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ciddn0052nvkk"]
+
+[ext_resource type="FontFile" uid="uid://c1lo2ct0u6uut" path="res://gui/themes/basic_theme/good timing bd.otf" id="1_x4rh2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wfew7"]
+bg_color = Color(0.756863, 0.67451, 0.286275, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3laic"]
+bg_color = Color(0.541176, 0.631373, 0.270588, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k1xt7"]
+bg_color = Color(0, 0.431373, 0.376471, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+shadow_color = Color(0, 0, 0, 0.321569)
+shadow_size = 5
+shadow_offset = Vector2(5, 5)
+
+[resource]
+default_font = ExtResource("1_x4rh2")
+Button/styles/hover = SubResource("StyleBoxFlat_wfew7")
+Button/styles/normal = SubResource("StyleBoxFlat_3laic")
+Panel/styles/panel = SubResource("StyleBoxFlat_k1xt7")

@@ -80,7 +80,7 @@ Input.is_action_pressed("ui_up")
 - @Exports(how to set up), you can edit in IDE inspector, press enter and see the change in-game: https://www.youtube.com/watch?v=VOcN6Y8mTEE 
 - Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
 - Custom Resources `Custom resources in Godot are user-created data containers that let you store and organize related information in a reusable way.` : https://www.youtube.com/watch?v=h5vpjCDNa-w
-
+- Autoloader = https://www.youtube.com/watch?v=09-aceKznw8
 
 ## GdScript
 
@@ -104,7 +104,14 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 - Control Node: https://www.youtube.com/watch?v=5Hog6a0EYa0
 - Splash Screen (quick): https://www.youtube.com/watch?v=xy-ssYTQ3as
 - Splash Screen Manager: https://www.youtube.com/watch?v=QKAuacUG0y4
-
+- Creating new Theme: https://www.youtube.com/watch?v=AxFKPXko35I
+- Quick Theme Editing: https://www.youtube.com/watch?v=jIk-OG5hG3k
+- color palette page generator: https://mycolor.space/
+- free fonts: https://www.dafont.com/
+- How to start centering and positioning, CanvasLayer: https://docs.godotengine.org/en/stable/tutorials/2d/canvas_layers.html
+- CanvasLayer explained: https://www.youtube.com/watch?v=SlZKDqjYJms
+- RuchTextLable, BBCode (how to reference variable without script): https://docs.godotengine.org/en/stable/tutorials/ui/bbcode_in_richtextlabel.html
+`Score: [expr GlobalVariables.score]`
 ## Timers 
 - Using timer node: https://gamedevacademy.org/timer-in-godot-complete-guide/
 
