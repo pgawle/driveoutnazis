@@ -644,10 +644,5 @@ scale = Vector2(1.5, 1.5)
 [node name="GuiLayerBase" type="CanvasLayer" parent="."]
 
 [node name="GUI" parent="GuiLayerBase" instance=ExtResource("4_pw53u")]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]

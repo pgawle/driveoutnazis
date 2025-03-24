@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://tsxmi2najsog"]
+[gd_scene load_steps=4 format=3 uid="uid://tsxmi2najsog"]
 
 [ext_resource type="PackedScene" uid="uid://ynokfwiqhneu" path="res://gui/start_menu/start_menu.tscn" id="1_rof5g"]
 [ext_resource type="Theme" uid="uid://ciddn0052nvkk" path="res://gui/themes/basic_theme/basic_theme.tres" id="2_wn6wo"]
+[ext_resource type="PackedScene" uid="uid://c77o57amdbn22" path="res://gui/game_version/game_version.tscn" id="3_mpskb"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -22,15 +23,42 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 size_flags_horizontal = 4
 
-[node name="Control" type="Control" parent="."]
+[node name="TopPanel" type="Control" parent="."]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 
-[node name="Panel" type="Panel" parent="Control"]
+[node name="Background" type="Panel" parent="TopPanel"]
 layout_mode = 1
-anchors_preset = 10
+anchors_preset = 15
 anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 theme = ExtResource("2_wn6wo")
+
+[node name="NazisKilled" type="Label" parent="TopPanel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 13.0
+offset_top = -11.5
+offset_right = 159.0
+offset_bottom = 11.5
+grow_vertical = 2
+theme = ExtResource("2_wn6wo")
+text = "Nazis killed: 1000"
+
+[node name="Label" parent="TopPanel" instance=ExtResource("3_mpskb")]
+layout_mode = 1
+anchors_preset = 6
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -490.0
+offset_top = -12.0
+offset_right = -23.0
+offset_bottom = 11.0
+grow_vertical = 2

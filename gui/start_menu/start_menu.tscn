@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://gui/start_menu/start_menu.gd" id="1_xo4ft"]
 [ext_resource type="Theme" uid="uid://ciddn0052nvkk" path="res://gui/themes/basic_theme/basic_theme.tres" id="2_8ha0x"]
 [ext_resource type="Texture2D" uid="uid://b3wwpyvxubgnw" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_right.png" id="2_pmo6v"]
-[ext_resource type="Script" path="res://gui/start_menu/label.gd" id="3_3qhwy"]
 [ext_resource type="Texture2D" uid="uid://cfc3eholm7210" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_left.png" id="3_7ayjc"]
+[ext_resource type="PackedScene" uid="uid://c77o57amdbn22" path="res://gui/game_version/game_version.tscn" id="3_i64to"]
 [ext_resource type="Texture2D" uid="uid://d0ptk0cvvb6u4" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_down.png" id="4_dr0ns"]
 [ext_resource type="Texture2D" uid="uid://dy6cr5rwkgl65" path="res://gui/start_menu/assets/pkl_lite_keys_0_one_arrow_up.png" id="5_o25sc"]
 [ext_resource type="Texture2D" uid="uid://b1w52cpggv7n0" path="res://gui/start_menu/assets/pkl_lite_keys_7_fiveplus.png" id="6_py8k2"]
@@ -33,19 +33,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_8ha0x")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Label" parent="Panel" instance=ExtResource("3_i64to")]
 layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -482.0
-offset_top = 4.0
-offset_right = -15.0
-offset_bottom = 27.0
-grow_horizontal = 0
-horizontal_alignment = 2
-vertical_alignment = 1
-script = ExtResource("3_3qhwy")
+offset_left = -478.0
+offset_top = 5.0
+offset_right = -11.0
+offset_bottom = 28.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
