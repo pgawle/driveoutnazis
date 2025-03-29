@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://r6yj64iax6w2"]
+[gd_scene load_steps=9 format=3 uid="uid://r6yj64iax6w2"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_41c4b"]
 [ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://player/assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
@@ -42,6 +42,9 @@ _data = {
 "RESET": SubResource("Animation_u83eh"),
 "drive": SubResource("Animation_4gmln")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5v1t"]
+size = Vector2(30, 16)
 
 [node name="PlayerCar" type="CharacterBody2D"]
 position = Vector2(560, 309)
@@ -89,3 +92,7 @@ rotation = 1.5708
 unique_name_in_owner = true
 position = Vector2(-7.00003, -6.99997)
 rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_y5v1t")

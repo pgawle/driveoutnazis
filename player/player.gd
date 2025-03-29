@@ -229,3 +229,18 @@ func emit_starting_values():
 func _on_max_speed_on_value_changed(value) -> void:
 	printerr("MAX SPEED ASSIGN" , value)
 	MAX_SPEED_FORWARD = value
+
+
+func _on_basic_enemy_area_entered(area: Area2D) -> void:
+	print('enter')
+	pass # Replace with function body.
+
+
+func _on_basic_enemy_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
+	print('enter 2')
+	pass # Replace with function body.
+
+
+func _on_basic_enemy_body_entered(body: Node2D) -> void:
+	print('enter 3')
+	pass # Replace with function body.

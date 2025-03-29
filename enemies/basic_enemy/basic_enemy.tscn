@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://dyhdnw2jtt6jk"]
+[gd_scene load_steps=3 format=3 uid="uid://dyhdnw2jtt6jk"]
 
 [ext_resource type="Texture2D" uid="uid://bb0niio08ymbh" path="res://icon.svg" id="1_lljul"]
 
-[node name="BasicEnemy" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lkxc"]
+size = Vector2(13, 14)
+
+[node name="BasicEnemy" type="Area2D" groups=["enemy"]]
 
 [node name="Icon" type="Sprite2D" parent="."]
 position = Vector2(-3.8147e-06, 7.62939e-06)
@@ -13,3 +16,6 @@ texture = ExtResource("1_lljul")
 offset_top = -2.0
 offset_right = 15.0
 offset_bottom = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6lkxc")
