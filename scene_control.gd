@@ -8,5 +8,7 @@ func _ready() -> void:
 	var scene: PackedScene = splash_screen
 	if(Globals.debug_mode):
 		scene = game_scene		
-	get_tree().change_scene_to_packed(scene)	
+	get_tree().call_deferred("change_scene_to_packed", scene)
+	
+	
 	

@@ -8,4 +8,3 @@
 script = ExtResource("1_o47f1")
 game_scene = ExtResource("2_waxnd")
 splash_screen = ExtResource("3_1f3q6")
-debug = true

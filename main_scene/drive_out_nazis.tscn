@@ -643,10 +643,11 @@ rotation = -6.28319
 scale = Vector2(1.5, 1.5)
 
 [node name="GuiLayerBase" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="GUI" parent="GuiLayerBase" instance=ExtResource("4_lxbwq")]
 
 [node name="BasicEnemy" parent="." instance=ExtResource("5_hotyl")]
-position = Vector2(132, 163)
+position = Vector2(626, 309)
 
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]

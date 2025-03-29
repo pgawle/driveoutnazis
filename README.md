@@ -90,6 +90,7 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 - Variables (Types and := meaning): https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html#variables
 - Static Typing: https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/static_typing.html
 - Dictionary(data by keys to return multiple values): https://docs.godotengine.org/en/stable/classes/class_dictionary.html#class-dictionary
+- get_deffert (or how to avoid bugs on syc or other): https://www.youtube.com/watch?v=rsXEGhuAFok&t=37s
 
 ### Patterns
 - Signelton: https://www.youtube.com/watch?v=0ox8C9b5fkQ
@@ -98,6 +99,9 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 - Event Bus, Global Signals: https://www.youtube.com/watch?v=excnQA86hW8
 - Classes https://www.youtube.com/watch?v=1B4DSpM0goo
 - Character Screen Wrap: https://kidscancode.org/godot_recipes/4.x/2d/screen_wrap/index.html
+
+### Collisions
+- Basic Collisions: https://www.youtube.com/watch?v=EqxyCswIVfM
 
 ## User Interface
 - Menu Creation with, most used Nodes (10 min): https://www.youtube.com/watch?v=VL_M1dr74a0
