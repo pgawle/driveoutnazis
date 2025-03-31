@@ -6,7 +6,6 @@ extends CharacterBody2D
 # ------------------------------------------------------------------
 
 signal draw_mark(point)
-signal values_ready(dictionary_of_values)
 
 # ------------------------------------------------------------------
 # Configuration Parameters
@@ -70,7 +69,7 @@ func update_handbrake_and_drift(delta):
 
 func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
-	emit_starting_values()
+
 	
 func _physics_process(delta):
 	
@@ -215,16 +214,6 @@ func idle_scale():
 		scale.y += SCALE_RATE_Y
 		scale_up = false
 		
-
-func emit_starting_values():
-	values_ready.emit({
-		"MAX_SPEED_FORWARD": MAX_SPEED_FORWARD
-	})
-
-
-func _on_max_speed_on_value_changed(value) -> void:
-	printerr("MAX SPEED ASSIGN" , value)
-	MAX_SPEED_FORWARD = value
 	
 func handle_collision(): 
 	for i in get_slide_collision_count():
