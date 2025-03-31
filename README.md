@@ -81,6 +81,7 @@ Input.is_action_pressed("ui_up")
 - Custom Signals: https://www.youtube.com/watch?v=bkmXd1hHPVw, https://www.youtube.com/watch?v=qkLBzm5D3Rs
 - Custom Resources `Custom resources in Godot are user-created data containers that let you store and organize related information in a reusable way.` : https://www.youtube.com/watch?v=h5vpjCDNa-w
 - Autoloader = https://www.youtube.com/watch?v=09-aceKznw8
+- Groups: https://docs.godotengine.org/en/stable/tutorials/scripting/groups.html
 
 ## GdScript
 
@@ -102,6 +103,8 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 
 ### Collisions
 - Basic Collisions: https://www.youtube.com/watch?v=EqxyCswIVfM
+- PlayerdBody2D and RigidBodyColission: https://www.youtube.com/watch?v=SJuScDavstM
+- All collisions types: https://www.youtube.com/watch?v=I640OJ1gusE
 
 ## User Interface
 - Menu Creation with, most used Nodes (10 min): https://www.youtube.com/watch?v=VL_M1dr74a0

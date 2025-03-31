@@ -90,11 +90,9 @@ func _physics_process(delta):
 	update_visuals(steer_direction)
 	
 	move_and_slide()
+	handle_collision()
 	apply_screen_wrap()
-
-
-
-	
+		
 
 func calculate_movement(_steer_direction: float, delta) -> Dictionary: 
 	var _rotation: float = 0
@@ -154,8 +152,6 @@ func apply_speed(acceleration: Vector2, delta):
 		var acceleration_with_forces = acceleration + drag_force + friction_force
 		velocity += acceleration_with_forces * delta
 		
-
-
 func get_steer_direction(_steer_direction: float, delta) -> float:
 	var turn = Input.get_axis("ui_left", "ui_right")
 	var target_steer = turn * deg_to_rad(MAX_STEER_ANGLE)
@@ -229,18 +225,10 @@ func emit_starting_values():
 func _on_max_speed_on_value_changed(value) -> void:
 	printerr("MAX SPEED ASSIGN" , value)
 	MAX_SPEED_FORWARD = value
-
-
-func _on_basic_enemy_area_entered(area: Area2D) -> void:
-	print('enter')
-	pass # Replace with function body.
-
-
-func _on_basic_enemy_area_shape_entered(area_rid: RID, area: Area2D, area_shape_index: int, local_shape_index: int) -> void:
-	print('enter 2')
-	pass # Replace with function body.
-
-
-func _on_basic_enemy_body_entered(body: Node2D) -> void:
-	print('enter 3')
-	pass # Replace with function body.
+	
+func handle_collision(): 
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var entity = collision.get_collider()
+		if entity.is_in_group(Globals.groups.enemy):
+			entity.on_hit(velocity)
