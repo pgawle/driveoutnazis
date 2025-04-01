@@ -135,6 +135,9 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 ## Audio
 - Adding SFX: https://www.youtube.com/watch?v=H6E8hxGwYRg
 
+## Debug
+- Visual forces: https://www.youtube.com/watch?v=yUa1WxSXprI
+
 
 ## General Tutorial Hubs
 

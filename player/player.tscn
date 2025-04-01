@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://r6yj64iax6w2"]
+[gd_scene load_steps=10 format=3 uid="uid://r6yj64iax6w2"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_41c4b"]
 [ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://player/assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
+[ext_resource type="PackedScene" uid="uid://clogkxjps6kcr" path="res://debug/velocity/debug_velocity.tscn" id="2_rjhu3"]
 [ext_resource type="Texture2D" uid="uid://ddrb1pvae6ada" path="res://player/assets/yellow-car.png" id="5_806wr"]
 [ext_resource type="Texture2D" uid="uid://3wd3s032e75w" path="res://player/assets/front-wheel-sprite.png" id="5_f3p3n"]
 
@@ -47,10 +48,11 @@ _data = {
 size = Vector2(30, 16)
 
 [node name="PlayerCar" type="CharacterBody2D"]
-position = Vector2(560, 309)
 rotation = 1.5708
 script = ExtResource("1_41c4b")
 metadata/_edit_group_ = true
+
+[node name="debug_velocity" parent="." instance=ExtResource("2_rjhu3")]
 
 [node name="start_engine" type="AudioStreamPlayer2D" parent="."]
 rotation = 1.5708

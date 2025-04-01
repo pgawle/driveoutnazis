@@ -70,11 +70,7 @@ func update_handbrake_and_drift(delta):
 func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
 
-	
 func _physics_process(delta):
-	
-	
-	
 	var acceleration = get_acceleration()
 	steer_direction = get_steer_direction(steer_direction, delta)
 	
