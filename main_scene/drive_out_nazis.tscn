@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=4 uid="uid://bj7fk75m85xhi"]
+[gd_scene load_steps=10 format=4 uid="uid://bj7fk75m85xhi"]
 
 [ext_resource type="Texture2D" uid="uid://cs4nb16yriml7" path="res://map/assets/CP_V1.0.4.png" id="1_iskhr"]
+[ext_resource type="Script" path="res://main_scene/drive_out_nazis.gd" id="1_p3xnn"]
 [ext_resource type="Script" path="res://wheels_tracks_layer/draw_plain.gd" id="2_cs18d"]
 [ext_resource type="PackedScene" uid="uid://r6yj64iax6w2" path="res://player/player.tscn" id="3_1wui1"]
 [ext_resource type="PackedScene" uid="uid://tsxmi2najsog" path="res://gui/gui.tscn" id="4_lxbwq"]
@@ -620,7 +621,15 @@ texture = ExtResource("1_iskhr")
 [sub_resource type="TileSet" id="TileSet_5mlda"]
 sources/0 = SubResource("TileSetAtlasSource_7wrl3")
 
+[sub_resource type="Curve2D" id="Curve2D_dg8kn"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1280, 0, 0, 0, 0, 0, 1280, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1280, 0)
+}
+point_count = 5
+
 [node name="Game" type="Node2D"]
+script = ExtResource("1_p3xnn")
+mob_scene = ExtResource("5_hotyl")
 
 [node name="MyMap" type="Node2D" parent="."]
 
@@ -651,5 +660,19 @@ visible = false
 [node name="BasicEnemy" parent="." instance=ExtResource("5_hotyl")]
 position = Vector2(722, 312)
 
+[node name="EnemySpawner" type="Path2D" parent="."]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_dg8kn")
+
+[node name="SpawnLocation" type="PathFollow2D" parent="EnemySpawner"]
+unique_name_in_owner = true
+position = Vector2(1280, 0)
+rotation = 1.5708
+
+[node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
+wait_time = 0.449
+autostart = true
+
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]
 [connection signal="body_entered" from="BasicEnemy" to="PlayerCar" method="_on_basic_enemy_body_entered"]
+[connection signal="timeout" from="EnemySpawner/SpawnTimer" to="." method="_on_spawn_timer_timeout"]
