@@ -105,6 +105,7 @@ Style guide best practices: https://docs.godotengine.org/en/stable/tutorials/scr
 - Basic Collisions: https://www.youtube.com/watch?v=EqxyCswIVfM
 - PlayerdBody2D and RigidBodyColission: https://www.youtube.com/watch?v=SJuScDavstM
 - All collisions types: https://www.youtube.com/watch?v=I640OJ1gusE
+- Rigidbody collision detection: https://www.youtube.com/watch?v=8fzM3z22fvE
 
 ## User Interface
 - Menu Creation with, most used Nodes (10 min): https://www.youtube.com/watch?v=VL_M1dr74a0

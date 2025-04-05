@@ -20,11 +20,10 @@ func get_velocity(rotation: bool = false):
 		vector = vector.normalized() * 50
 	
 	if(rotation):
-		vector = vector.rotated(parent.rotation)	
+		vector = vector.rotated(-parent.rotation)	
 	return vector
 
 func _draw() -> void:
 	if(Globals.debug_mode):
-		global_rotation = 0
 		draw_line(position, get_velocity(), Color.RED, 4.0)	
 		draw_line(position, get_velocity(true), Color.PINK, 2.0)

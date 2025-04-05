@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://clogkxjps6kcr"]
 
-[ext_resource type="Script" path="res://debug/velocity/debug_velocity.gd" id="1_vqapy"]
+[ext_resource type="Script" uid="uid://depkfr8avdquc" path="res://debug/velocity/debug_velocity.gd" id="1_vqapy"]
 
 [node name="debug_velocity" type="Marker2D"]
 script = ExtResource("1_vqapy")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://r6yj64iax6w2"]
 
-[ext_resource type="Script" path="res://player/player.gd" id="1_41c4b"]
+[ext_resource type="Script" uid="uid://d136bb37u6wv2" path="res://player/player.gd" id="1_41c4b"]
 [ext_resource type="AudioStream" uid="uid://bvdrmnl4n47eu" path="res://player/assets/ford-mustang-engine-1985-78386.mp3" id="2_o7wo8"]
 [ext_resource type="PackedScene" uid="uid://clogkxjps6kcr" path="res://debug/velocity/debug_velocity.tscn" id="2_rjhu3"]
 [ext_resource type="Texture2D" uid="uid://ddrb1pvae6ada" path="res://player/assets/yellow-car.png" id="5_806wr"]
@@ -40,8 +40,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rw28k"]
 _data = {
-"RESET": SubResource("Animation_u83eh"),
-"drive": SubResource("Animation_4gmln")
+&"RESET": SubResource("Animation_u83eh"),
+&"drive": SubResource("Animation_4gmln")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y5v1t"]
@@ -49,6 +49,8 @@ size = Vector2(30, 16)
 
 [node name="PlayerCar" type="CharacterBody2D"]
 rotation = 1.5708
+collision_mask = 3
+platform_on_leave = 2
 script = ExtResource("1_41c4b")
 metadata/_edit_group_ = true
 
@@ -68,7 +70,7 @@ autostart = true
 unique_name_in_owner = true
 root_node = NodePath("../CarBody")
 libraries = {
-"": SubResource("AnimationLibrary_rw28k")
+&"": SubResource("AnimationLibrary_rw28k")
 }
 speed_scale = 1.5
 

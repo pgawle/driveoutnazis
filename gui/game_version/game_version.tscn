@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c77o57amdbn22"]
 
 [ext_resource type="Theme" uid="uid://ciddn0052nvkk" path="res://gui/themes/basic_theme/basic_theme.tres" id="1_1yovu"]
-[ext_resource type="Script" path="res://gui/game_version/game_version.gd" id="1_4wka2"]
+[ext_resource type="Script" uid="uid://bfai3ds0rou6q" path="res://gui/game_version/game_version.gd" id="1_4wka2"]
 
 [node name="Label" type="Label"]
 anchors_preset = 1

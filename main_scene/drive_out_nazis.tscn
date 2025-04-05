@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=4 uid="uid://bj7fk75m85xhi"]
 
 [ext_resource type="Texture2D" uid="uid://cs4nb16yriml7" path="res://map/assets/CP_V1.0.4.png" id="1_iskhr"]
-[ext_resource type="Script" path="res://main_scene/drive_out_nazis.gd" id="1_p3xnn"]
-[ext_resource type="Script" path="res://wheels_tracks_layer/draw_plain.gd" id="2_cs18d"]
+[ext_resource type="Script" uid="uid://bb2ebf12gxjgc" path="res://main_scene/drive_out_nazis.gd" id="1_p3xnn"]
+[ext_resource type="Script" uid="uid://cdvqil3o0r3a8" path="res://wheels_tracks_layer/draw_plain.gd" id="2_cs18d"]
 [ext_resource type="PackedScene" uid="uid://r6yj64iax6w2" path="res://player/player.tscn" id="3_1wui1"]
 [ext_resource type="PackedScene" uid="uid://tsxmi2najsog" path="res://gui/gui.tscn" id="4_lxbwq"]
 [ext_resource type="PackedScene" uid="uid://dyhdnw2jtt6jk" path="res://enemies/basic_enemy/basic_enemy.tscn" id="5_hotyl"]
@@ -651,6 +651,7 @@ script = ExtResource("2_cs18d")
 position = Vector2(400, 322)
 rotation = -6.28319
 scale = Vector2(1.5, 1.5)
+BASIC_HIT_FORCE = 20000
 
 [node name="GuiLayerBase" type="CanvasLayer" parent="."]
 visible = false
@@ -670,7 +671,7 @@ position = Vector2(1280, 0)
 rotation = 1.5708
 
 [node name="SpawnTimer" type="Timer" parent="EnemySpawner"]
-wait_time = 0.449
+wait_time = 0.001
 autostart = true
 
 [connection signal="draw_mark" from="PlayerCar" to="DrawPlain" method="_on_player_car_draw_mark"]

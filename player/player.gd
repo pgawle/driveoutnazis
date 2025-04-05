@@ -35,6 +35,7 @@ signal draw_mark(point)
 @export var TRACTION_WHEN_FAST := 6    # High-speed traction
 @export var TRACTION_WHEN_SLOW := 10     # Low-speed traction
 @export var STOPPING_SPEED_LIMIT := 20.0   # Speed below which car stops when no input
+@export var BASIC_HIT_FORCE :=50
 
 @export_group("Visual Effects")
 @export var SCALE_RATE_X := 0.02
@@ -49,7 +50,7 @@ var steer_direction := 0.0
 var scale_up := false 
 var handbrake_active = false
 var drift_timer = 0.0
-
+var last_safe_position = Vector2()
 # ------------------------------------------------------------------
 # Node References
 # ------------------------------------------------------------------
@@ -71,6 +72,7 @@ func _ready() -> void:
 	idle_animation.timeout.connect(idle_scale)
 
 func _physics_process(delta):
+	last_safe_position = global_position
 	var acceleration = get_acceleration()
 	steer_direction = get_steer_direction(steer_direction, delta)
 	
@@ -81,12 +83,22 @@ func _physics_process(delta):
 	rotation = movement["rotation"]
 	
 	apply_speed(acceleration,delta)
-	
 	update_visuals(steer_direction)
-	
-	move_and_slide()
-	handle_collision()
+	var collision := move_and_collide(velocity * delta)
+	handle_collision(collision)
 	apply_screen_wrap()
+
+
+func handle_collision(collision : KinematicCollision2D):
+	if collision:
+		var collider := collision.get_collider()
+		if collider is RigidBody2D:
+			# Apply impulse to the rigid body in the direction of the collision normal
+			var impulse = -collision.get_normal() * BASIC_HIT_FORCE
+			collider.apply_central_impulse(impulse)
+	print('yeaah')
+
+
 		
 
 func calculate_movement(_steer_direction: float, delta) -> Dictionary: 
@@ -209,11 +221,3 @@ func idle_scale():
 		scale.x += SCALE_RATE_X
 		scale.y += SCALE_RATE_Y
 		scale_up = false
-		
-	
-func handle_collision(): 
-	for i in get_slide_collision_count():
-		var collision = get_slide_collision(i)
-		var entity = collision.get_collider()
-		if entity.is_in_group(Globals.groups.enemy):
-			entity.on_hit(velocity)
